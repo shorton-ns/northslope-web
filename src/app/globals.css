@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+/* ── Fonts ─────────────────────────────────────────────────────────────────
+   Hanken Grotesk is available on Google Fonts.
+   Aeonik is a commercial typeface — license from Cos Type Foundry
+   and place font files in /public/fonts/ with the @font-face below.
+   Until then, the heading stack falls back to Inter.
+   ──────────────────────────────────────────────────────────────────────── */
+
+/* Aeonik @font-face — uncomment and update paths once licensed
+@font-face {
+  font-family: 'Aeonik';
+  src: url('/fonts/Aeonik-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Aeonik';
+  src: url('/fonts/Aeonik-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+*/
+
+/* ── Altitude Token Layer ──────────────────────────────────────────────── */
+:root {
+  /* Background */
+  --bg-default:   #FAFAF9;
+  --bg-subtle:    #F5F5F4;
+  --bg-inverse:   #1C1917;
+
+  /* Surface */
+  --surface-default:  #FFFFFF;
+  --surface-raised:   #FAFAF9;
+  --surface-overlay:  #FFFFFF;
+  --surface-muted:    #F5F5F4;
+  --surface-inverse:  #1C1917;
+
+  /* Interactive */
+  --interactive-primary:         #1A6E45;
+  --interactive-primary-hover:   #125230;
+  --interactive-primary-fg:      #FFFFFF;
+  --interactive-secondary:       #E7E5E4;
+  --interactive-secondary-hover: #D6D3D1;
+  --interactive-secondary-fg:    #1C1917;
+  --interactive-ghost-fg:        #1A6E45;
+  --interactive-ghost-border:    #238551;
+  --interactive-focus-ring:      #3EBD78;
+
+  /* Content */
+  --content-default:       #1C1917;
+  --content-secondary:     #78716C;
+  --content-tertiary:      #A8A29E;
+  --content-disabled:      #D6D3D1;
+  --content-inverse:       #FAFAF9;
+  --content-accent:        #1A6E45;
+  --content-accent-subtle: #238551;
+
+  /* Border */
+  --border-default: #D6D3D1;
+  --border-subtle:  #F5F5F4;
+  --border-strong:  #A8A29E;
+  --border-focus:   #2EA060;
+}
+
+/* ── Base ──────────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Hanken Grotesk', Inter, system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--content-default);
+  background-color: var(--bg-default);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Typography helpers ────────────────────────────────────────────────── */
+.type-display-xl {
+  font-family: 'Aeonik', Inter, system-ui, sans-serif;
+  font-size: clamp(48px, 7vw, 80px);
+  font-weight: 500;
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+}
+.type-display {
+  font-family: 'Aeonik', Inter, system-ui, sans-serif;
+  font-size: clamp(36px, 5vw, 60px);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+.type-h1 {
+  font-family: 'Aeonik', Inter, system-ui, sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+.type-h2 {
+  font-family: 'Aeonik', Inter, system-ui, sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+.type-h3 {
+  font-family: 'Aeonik', Inter, system-ui, sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+.type-h4 {
+  font-family: 'Aeonik', Inter, system-ui, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+.type-eyebrow {
+  font-family: 'Hanken Grotesk', Inter, system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--content-accent);
+}
+.type-body-lg {
+  font-family: 'Hanken Grotesk', Inter, system-ui, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+.type-body {
+  font-family: 'Hanken Grotesk', Inter, system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.type-body-strong {
+  font-family: 'Hanken Grotesk', Inter, system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+}

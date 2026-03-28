@@ -1,5 +1,7 @@
 "use client";
 
+import NetworkGraph from "./NetworkGraph";
+
 export default function Hero() {
   return (
     <section
@@ -10,16 +12,7 @@ export default function Hero() {
         overflow: "hidden",
       }}
     >
-      <div
-        style={{
-          maxWidth: 1200,
-          margin: "0 auto",
-          display: "grid",
-          gridTemplateColumns: "1fr",
-          gap: 64,
-          alignItems: "center",
-        }}
-      >
+      <div className="hero-grid" style={{ maxWidth: 1200, margin: "0 auto" }}>
         {/* Text block */}
         <div style={{ maxWidth: 760 }}>
           {/* Eyebrow */}
@@ -173,6 +166,37 @@ export default function Hero() {
                 </span>
               ))}
             </div>
+          </div>
+        </div>
+
+        {/* Network graph panel */}
+        <div
+          style={{
+            position: "relative",
+            borderRadius: 16,
+            overflow: "hidden",
+            backgroundColor: "var(--bg-inverse)",
+            aspectRatio: "4 / 3",
+            border: "1px solid rgba(62, 189, 120, 0.12)",
+            boxShadow: "0 0 0 1px rgba(0,0,0,0.06), 0 24px 48px rgba(0,0,0,0.12)",
+          }}
+        >
+          <NetworkGraph />
+          {/* Corner label */}
+          <div
+            style={{
+              position: "absolute",
+              bottom: 16,
+              right: 16,
+              fontSize: 10,
+              fontWeight: 600,
+              letterSpacing: "0.1em",
+              textTransform: "uppercase",
+              color: "rgba(62, 189, 120, 0.4)",
+              fontFamily: "Hanken Grotesk, Inter, system-ui, sans-serif",
+            }}
+          >
+            Live system graph
           </div>
         </div>
       </div>
